@@ -1,24 +1,27 @@
-import os
+from rich.console import Console
+
+console = Console()
 
 def chat():
+
     while True:
         user = input("ZyraX> ").lower()
 
         if user == "exit":
-            print("Shutting down ZyraX...")
+            console.print("Shutting down ZyraX", style="red")
             break
 
         elif "wifi" in user:
-            print("Running WiFi Analyzer Module")
+            console.print("Running WiFi Analyzer", style="green")
 
         elif "network" in user:
-            print("Running Network Scanner")
+            console.print("Running Network Scanner", style="green")
 
         elif "system" in user:
-            print("Checking system status")
+            console.print("Checking System", style="green")
 
         elif "tools" in user:
-            print("""
+            console.print("""
 Available Tools:
 wifi
 network
@@ -27,4 +30,4 @@ exit
 """)
 
         else:
-            print("Command not recognized")
+            console.print("Command not recognized", style="yellow")

@@ -1,9 +1,12 @@
+from rich.console import Console
+from rich.panel import Panel
 from zyrax_ai import chat
 
-print("\n==============================")
-print("   VIISHARAJhavk SYSTEM")
-print("   King of Cyber Defense")
-print("   ZyraX AI Activated")
-print("==============================\n")
+console = Console()
+
+console.print(Panel.fit(
+"VIISHARAJhavk\nKing of Cyber Defense\nZyraX AI Activated",
+style="bold green"
+))
 
 chat()
